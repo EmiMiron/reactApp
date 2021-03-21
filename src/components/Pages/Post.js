@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import "../../App.scss";
 import { Button } from 'react-bootstrap';
 import "../SectionInfo/info.css"
-import Alert from 'react-bootstrap/Alert';
 
 export default function Posts() {
     const [blogger, setBlogger] = useState({
@@ -16,6 +15,7 @@ export default function Posts() {
     const onChangeHandler = (e) => {
         if ((!e.currentTarget.value || e.currentTarget.value === "") && (e.currentTarget.id === "name" || e.currentTarget.id === "description" || e.currentTarget.id === "email")) {
             setErrors({
+
                 ...errors,
                 [e.currentTarget.id]: "*Obligatoriu",
             });
